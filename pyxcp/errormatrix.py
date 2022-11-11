@@ -115,7 +115,8 @@ ERROR_TABLE = {
 
 ERROR_MATRIX = {
     Command.CONNECT: {
-        XcpError.ERR_TIMEOUT: ((PreAction.NONE,), Action.REPEAT_INF_TIMES),
+        # XcpError.ERR_TIMEOUT: ((PreAction.NONE,), Action.REPEAT_INF_TIMES),
+        XcpError.ERR_TIMEOUT: ((PreAction.NONE,), Action.REPEAT_2_TIMES),
         XcpError.ERR_RESOURCE_TEMPORARY_NOT_ACCESSIBLE: (
             PreAction.DISPLAY_ERROR,
             Action.REPEAT,
